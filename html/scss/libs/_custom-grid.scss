@@ -1,0 +1,95 @@
+.section {
+    .delete-btn {
+        display: none;
+    }
+
+    .embeddedContent {
+        position: relative;
+        padding-bottom: 56.25%;
+        overflow: hidden;
+    }
+}
+
+.blog-grid {
+    margin: 20px auto;
+
+    >div {
+        padding: 0 20px;
+    }
+
+    // 右圖
+    &.right-flow {
+        flex-direction: row-reverse;
+    }
+
+    &.row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+    // 先隱藏避免寬度不同
+    // .text-wrap,
+    // .video.wrap {
+    //     padding: 0;
+    // }
+
+
+    .text-box {
+        text-align: justify;
+    }
+
+    .img-box {
+        overflow: hidden;
+    }
+
+    p {
+        line-height: 1.8;
+
+        @include media-breakpoint-down(sm) {
+            padding: 1.5;
+        }
+    }
+
+    h3 {
+        color: $main-green;
+    }
+
+    hr {
+        border-top: 1px solid $main-green;
+    }
+
+    .sub-title-p {
+        font-size: 1.3rem;
+        color: $light-green;
+        @include media-breakpoint-down(sm) {
+         margin: 0;
+        }
+
+    }
+
+
+    // 影片RWD embed youtube
+    .video-wrap {
+        position: relative;
+        padding-bottom: 56.25%;
+        overflow: hidden;
+        
+        iframe, video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        &.ckeditor-html5-video{
+            padding: 0;
+            video{
+                position: unset;
+            }
+        }
+
+
+    }
+
+}

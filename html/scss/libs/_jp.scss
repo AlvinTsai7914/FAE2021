@@ -1,0 +1,17 @@
+
+
+.menu{
+    li{
+        a{ 
+            &.icon_1{background-position: 30px center;}
+            &.icon_2{ background-position:30px center;}
+            &.icon_3{background-position: 30px center;}
+            &.icon_4{ background-position: 30px center;}
+            &.icon_5{ background-position: 30px center; padding-left: 60px;}
+            
+            @include respond-to (only-device){
+                &.icon_5{  padding: 0px;}
+            }
+        }
+    }
+} 

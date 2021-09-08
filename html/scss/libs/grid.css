@@ -1,0 +1,77 @@
+
+.blog-grid img{
+    width: 100%;
+    height: auto;
+} 
+
+.blog-grid {
+    padding: 20px;
+}
+
+.blog-grid>div {
+    margin-bottom: 30px;
+}
+
+
+.blog-grid .text-wrap,
+.blog-grid .video-wrap {
+    padding: 0;
+}
+
+
+.blog-grid .video-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+
+.blog-grid .video-wrap,
+.ckeditor-html5-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+.video-wrap iframe, .video-wrap video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+.blog-grid.right-flow {
+    flex-direction: row-reverse;
+}
+
+.blog-grid .text-box {
+    text-align: justify;
+
+}
+
+.blog-grid p {
+    line-height: 1.8;
+}
+
+
+.blog-grid h1, .blog-grid h2, .blog-grid h3, .blog-grid h4, .blog-grid h5, .blog-grid h6 {
+    color: #910782;
+}
+
+
+.blog-grid .sub-title-p {
+    font-size: 1.3rem;
+    color: #992d76;
+
+}
+
+.blog-grid .img-box {
+    overflow: hidden;
+}
+
+.blog-grid hr{
+    border-top: 1px solid  #910782;
+}
