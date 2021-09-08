@@ -84,15 +84,17 @@ $lg: 1200px;
 
 //  ===============網頁用色定義碼 ===============
 //----------主副色
-$primary-color: #910782; //紫色
+$primary-color: #0B2E8E; //藍色
 $secondary-color: #df6e7c; //玫瑰
 
-$primary-color-ligter:#B144A5;
+$primary-color-ligter:#33A7FB;
+$primary-color-dark:#00126F;
 
 $black:#333;
-$gray:#F4F4F4;
-$dark-gray:#D9D8D8;
-
+// $gray:#F4F4F4;
+// $dark-gray:#D9D8D8;
+$gray:#EFEFEF;
+$dark-gray:#7E7E7E;
 //  =============== global setting ===============
 //----------區塊之間的gap高度
 $gap-screen: 50px;
