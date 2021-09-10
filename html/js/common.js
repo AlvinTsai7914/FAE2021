@@ -99,4 +99,39 @@ $(function(){
 		$body.animate({scrollTop: iScrollPointA}, 150);
 		return false;
 	});
+
+
+     // 上方產品列表啟動
+     $(".product_table_trigger").hover(
+        function () {
+            $(".header_product_table").css(
+                "transform",
+                "translate(0,0px)"
+            );
+            $(".header_product_table").css("opacity", "1");
+        },
+        function () {
+            $(".header_product_table").css(
+                "transform",
+                "translate(0,-100%)"
+            );
+            $(".header_product_table").css("opacity", "0");
+        }
+    );
+    $(".header_product_table").hover(
+        function () {
+            $(".header_product_table").css(
+                "transform",
+                "translate(0,0px)"
+            );
+            $(".header_product_table").css("opacity", "1");
+        },
+        function () {
+            $(".header_product_table").css(
+                "transform",
+                "translate(0,-100%)"
+            );
+            $(".header_product_table").css("opacity", "0");
+        }
+    );
 });
