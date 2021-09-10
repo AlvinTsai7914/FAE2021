@@ -29,9 +29,9 @@ $(function(){
 
     // pc版首頁選單 FIXED
 
-    $('header').after($('.menu').clone());
-    $('.menu').eq(0).addClass('menu_ori')
-    $('.menu').eq(1).addClass('menu_clone');
+    // $('header').after($('.menu').clone());
+    // $('.menu').eq(0).addClass('menu_ori')
+    // $('.menu').eq(1).addClass('menu_clone');
 
 
 
@@ -41,29 +41,29 @@ $(function(){
 
    
 
-    $(window).on("scroll", function(){
-        var iwinWidth = $(window).width();
-        //計時器歸零
-        if(oScrollTimer){clearTimeout(oScrollTimer);}
+    // $(window).on("scroll", function(){
+    //     var iwinWidth = $(window).width();
+    //     //計時器歸零
+    //     if(oScrollTimer){clearTimeout(oScrollTimer);}
 
-        oScrollTimer = setTimeout(function(){
-            iWinScrollT = $(window).scrollTop();
-            if(iWinScrollT > iNav_1Point){
+    //     oScrollTimer = setTimeout(function(){
+    //         iWinScrollT = $(window).scrollTop();
+    //         if(iWinScrollT > iNav_1Point){
                
-                if(iwinWidth > 768){
-                    $(".menu_ori").css({"visibility":"hidden"});
-                    $(".menu_clone").addClass('fixed_active')
-                }
-            }else{
-                if(iwinWidth > 768){
-                    $(".menu_ori").css({"visibility":"visible"});
-                    $(".menu_clone").removeClass('fixed_active')
-                }
+    //             if(iwinWidth > 768){
+    //                 $(".menu_ori").css({"visibility":"hidden"});
+    //                 $(".menu_clone").addClass('fixed_active')
+    //             }
+    //         }else{
+    //             if(iwinWidth > 768){
+    //                 $(".menu_ori").css({"visibility":"visible"});
+    //                 $(".menu_clone").removeClass('fixed_active')
+    //             }
               
-            }
-        },0);
+    //         }
+    //     },0);
 
-    });
+    // });
 
  
 

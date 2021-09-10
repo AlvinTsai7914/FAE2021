@@ -1,225 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style_zh-Hant.css">
-    <title>版型</title>
-
-</head>
-<body>
-    <!-- warpper 開始 -->
-    <div class="wrapper index bg_line">
-       
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style_zh-Hant.css" />
+        <title>版型</title>
+    </head>
+    <body>
+        <!-- warpper 開始 -->
+        <div class="wrapper index bg_line">
             <header>
                 <div class="inner">
                     <a href="index.htm" class="logo">帆茂股份有限公司</a>
-                    <div class="menu_lang"> <a class="active" href="zh_tw">繁中</a><a href="zh_en">EN</a> <a href="zh_jp">JP</a></div>
+                    <div class="main_menu">
+                        <ul>
+                            <li><a href="index.htm">首 頁</a></li>
+                            <li class="product_table_trigger">
+                                <a href="#">產品介紹</a>
+                            </li>
+                            <li><a href="about.htm">關於我們</a></li>
+                            <li><a href="contact.htm">聯絡我們</a></li>
+                        </ul>
+                    </div>
+                    <select>
+                        <option selected href="zh_tw">繁中</option>
+                        <option href="zh_tw">简中</option>
+                        <option href="zh_en">EN</option>
+                        <option href="zh_jp">JP</option>
+                    </select>
                 </div>
-               
+
                 <div class="menu_oprate">
                     <div class="btn_side_open">open</div>
                     <div class="btn_side_close">close</div>
                 </div>
             </header>
-            
-            <!-- 內頁白色menu 開始 -->
-            <div class="side" >
+
+            <!-- 上方產品列表 開始 -->
+            <div class="product_table">
+                <div class="row">
+                    <div class="col-6 py-3">
+                        <h3>title</h3>
+                        <ul class="row">
+                            <li class="col-6"><a href="#">list</a></li>
+                            <li class="col-6"><a href="#">list</a></li>
+                            <li class="col-6"><a href="#">list</a></li>
+                            <li class="col-6"><a href="#">list</a></li>
+                            <li class="col-6"><a href="#">list</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 py-3">
+                        <h3>title</h3>
+                        <ul class="row">
+                            <li class="col-6"><a href="#">list</a></li>
+                            <li class="col-6"><a href="#">list</a></li>
+                            <li class="col-6"><a href="#">list</a></li>
+                            <li class="col-6"><a href="#">list</a></li>
+                            <li class="col-6"><a href="#">list</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 py-3">
+                        <h3>title</h3>
+                        <ul class="row">
+                            <li class="col-6"><a href="#">list</a></li>
+                            <li class="col-6"><a href="#">list</a></li>
+                            <li class="col-6"><a href="#">list</a></li>
+                            <li class="col-6"><a href="#">list</a></li>
+                            <li class="col-6"><a href="#">list</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 上方產品列表 結束 -->
+
+            <!-- 側邊 menu 開始 -->
+            <div class="side">
                 <div class="menu">
                     <ul>
                         <li><a class="icon_1" href="index.htm">首頁</a></li>
-                        <li><a class="icon_2" href="product-list.htm">產品</a></li>
-                        <li><a class="icon_3" href="production.htm">製程</a></li>
+                        <li>
+                            <a class="icon_2 lv1" href="#">產品</a>
+                            <ul>
+                                <li>
+                                    <a class="lv2" href="#">設備</a>
+                                    <ul>
+                                        <li><a href="#">繞線設備機</a></li>
+                                        <li><a href="#">伸線機</a></li>
+                                        <li><a href="#">放線設備</a></li>
+                                        <li><a href="#">張力控制器</a></li>
+                                        <li><a href="#">熱處理設備</a></li>
+                                        <div class="lv2_arrow"></div>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="lv2" href="#">材料</a>
+                                    <ul>
+                                        <li><a href="#">繞線設備機</a></li>
+                                        <li><a href="#">伸線機</a></li>
+                                        <li><a href="#">放線設備</a></li>
+                                        <li><a href="#">繞線設備機</a></li>
+                                        <li><a href="#">伸線機</a></li>
+                                        <li><a href="#">放線設備</a></li>
+                                        <li><a href="#">繞線設備機</a></li>
+                                        <li><a href="#">伸線機</a></li>
+                                        <li><a href="#">放線設備</a></li>
+                                        <div class="lv2_arrow"></div>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="lv2" href="#">主類別</a>
+                                    <ul>
+                                        <li><a href="#">繞線設備機</a></li>
+                                        <li><a href="#">伸線機</a></li>
+                                        <li><a href="#">放線設備</a></li>
+                                        <li><a href="#">繞線設備機</a></li>
+                                        <li><a href="#">伸線機</a></li>
+                                        <li><a href="#">放線設備</a></li>
+                                        <li><a href="#">繞線設備機</a></li>
+                                        <li><a href="#">伸線機</a></li>
+                                        <li><a href="#">放線設備</a></li>
+                                        <div class="lv2_arrow"></div>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="lv1_arrow"></div>
+                        </li>
+                        <li>
+                            <a class="icon_3" href="production.htm">製程</a>
+                        </li>
                         <li><a class="icon_4" href="about.htm">關於我們</a></li>
-                        <li><a class="icon_5" href="contact.htm">聯絡我們</a></li>
+                        <li>
+                            <a class="icon_5" href="contact.htm">聯絡我們</a>
+                        </li>
                     </ul>
-                    <div class="menu_lang"><a class="active" href="zh_tw">繁中</a><a href="zh_en">EN</a> <a href="zh_jp">JP</a></div>
                 </div>
-               
             </div>
-            <!-- 內頁白色menu 結束 -->
-    
+            <!-- 側邊 menu 結束 -->
+
             <!-- main_banner 開始 -->
             <div class="main_banner">
-                <!-- 首頁 大menu 開始 -->
-                <div class="main_menu">
-                    <ul>
-                        <li><a class="icon_1" href="index.htm">首頁</a></li>
-                        <li><a class="icon_2" href="product-list.htm">產品</a></li>
-                        <li><a class="icon_3" href="production.htm">製程</a></li>
-                        <li><a class="icon_4" href="about.htm">關於我們</a></li>
-                        <li><a class="icon_5" href="contact.htm">聯絡我們</a></li>
-                    </ul>
-                </div>
-                <!-- 首頁 大menu 結束 -->
-
                 <!-- PC banner -->
                 <div class="banner_gallery d-none d-sm-block">
-                    <div class="item"> <a href="#"><img src="img/banner.jpg" alt=""></a></div>
-                    <div class="item"><a href="#"><img src="img/banner.jpg" alt=""></a></div>
+                    <div class="item">
+                        <a href="#"><img src="img/banner_zh.jpg" alt="" /></a>
+                    </div>
+                    <div class="item">
+                        <a href="#"><img src="img/banner_zh.jpg" alt="" /></a>
+                    </div>
                 </div>
                 <!-- PC banner -->
                 <!-- M banner -->
                 <div class="banner_gallery_m d-sm-none">
-                    <div class="item"> <a href="#"><img src="img/750x520.png" alt=""></a></div>
-                    <div class="item"><a href="#"><img src="img/750x520.png" alt=""></a></div>
+                    <div class="item">
+                        <a href="#"><img src="img/banner_m_zh.jpg" alt="" /></a>
+                    </div>
+                    <div class="item">
+                        <a href="#"><img src="img/banner_m_zh.jpg" alt="" /></a>
+                    </div>
                 </div>
                 <!-- M banner -->
             </div>
             <!-- main_banner 結束 -->
             <!-- container 開始 -->
-            <div class="container ">
-
-                <div class="index_about">
-                    <div class="row content"> 
-                        <div class="col-12 col-md-4 slogan">
-                            <img class="slogan" src="img/index_slogan.png" alt="">
-                        </div>
-                        <p class="col-12 col-md-5">我們專注於各式極細金屬線材的加工，特別是在難加工材料方面，透過有別
-                            以往的加工方式將材料以高品質及相對實惠的價格提供給客戶。除了現有材
-                            料販售之外也進行代工生產，不論數量多寡皆可彈性的對應，歡迎隨時來
-                            電/信洽詢。</p>
-                    </div>
-                    <div class="index_deco"></div>
-                </div>
-                
-                <div class="index_news_list bg_gray_line_opcity ">
+            <div class="container py-0 bg_dark">
+                <div class="index_news_list">
                     <div class="page_title">
                         <h2>最新消息</h2>
                     </div>
                     <ul class="news_list">
-                        <li><span class="date">2020/7/2</span><a href="news-detail.htm">如果要製作較不複雜的圖樣，使其能迅速列印，請從圖樣圖稿中移除不必要，請從圖樣圖稿中移除不必要的細，請從圖樣圖稿中移除不必要的細，請從圖樣圖稿中移除不必要的細，請從圖樣圖稿中移除不必要的細，請從圖樣圖稿中移除不必要的細，請從圖樣圖稿中移除不必要的細的細節結束</a></li>
-                        <li><span class="date">2020/7/2</span><a href="news-detail.htm">如果要製作較不複雜的圖樣</a></li>
-                        <li><span class="date">2020/7/2</span><a href="news-detail.htm">如果要製作較不複雜的圖樣，使其能迅速列印，請從圖樣圖稿中移除不必要的細節</a></li>
-                        <li><span class="date">2020/7/2</span><a href="news-detail.htm">如果要製作較不複雜的圖樣，使其能迅速列印，請從圖樣圖稿中移除不必要的細節</a></li>
-                        <li><span class="date">2020/7/2</span><a href="news-detail.htm">如果要製作較不複雜的圖樣，使其能迅速列印，請從圖樣圖稿中移除不必要的細節</a></li>
+                        <li>
+                            <span class="date">2020/7/2</span
+                            ><a href="news-detail.htm"
+                                >如果要製作較不複雜的圖樣，使其能迅速列印，請從圖樣圖稿中移除不必要，請從圖樣圖稿中移除不必要的細，請從圖樣圖稿中移除不必要的細，請從圖樣圖稿中移除不必要的細，請從圖樣圖稿中移除不必要的細，請從圖樣圖稿中移除不必要的細，請從圖樣圖稿中移除不必要的細的細節結束</a
+                            >
+                        </li>
+                        <li>
+                            <span class="date">2020/7/2</span
+                            ><a href="news-detail.htm"
+                                >如果要製作較不複雜的圖樣</a
+                            >
+                        </li>
+                        <li>
+                            <span class="date">2020/7/2</span
+                            ><a href="news-detail.htm"
+                                >如果要製作較不複雜的圖樣，使其能迅速列印，請從圖樣圖稿中移除不必要的細節</a
+                            >
+                        </li>
+                        <li>
+                            <span class="date">2020/7/2</span
+                            ><a href="news-detail.htm"
+                                >如果要製作較不複雜的圖樣，使其能迅速列印，請從圖樣圖稿中移除不必要的細節</a
+                            >
+                        </li>
+                        <li>
+                            <span class="date">2020/7/2</span
+                            ><a href="news-detail.htm"
+                                >如果要製作較不複雜的圖樣，使其能迅速列印，請從圖樣圖稿中移除不必要的細節</a
+                            >
+                        </li>
                     </ul>
                 </div>
-
-               <div class="index_product_list">
-                    <div class="page_title">
-                        <h2>產 品</h2>
-                    </div>
-                    <ul class="product_list row product_list_gallery">
-                        <li class="col">
-                            <a href="product-list.htm">
-                                <div class="img product-border-left">
-                                    <img class="" src="http://fakeimg.pl/215x215" alt="">
-                                </div>
-                                <h4>圓 線</h4>
-                                <p>高碳鋼/不銹鋼/鈦/鎳鈦/鎢/銅鋯</p>
-                            </a>
-                        </li>
-                        <li class="col">
-                            <a href="product-list.htm">
-                                <div class="img product-border-left">
-                                    <img class="" src="http://fakeimg.pl/215x215" alt="">
-                                </div>
-                                <h4>圓 線</h4>
-                                <p>高碳鋼/不銹鋼/鈦/鎳鈦/鎢/銅鋯</p>
-                            </a>
-                        </li>
-                        <li class="col">
-                            <a href="product-list.htm">
-                                <div class="img product-border-top">
-                                    <img class="" src="http://fakeimg.pl/215x215" alt="">
-                                </div>
-                                <h4>捲 線</h4>
-                                <p>不銹鋼/鎢/鈦/鎳鈦</p>
-                            </a>
-                        </li>
-                        <li class="col">
-                            <a href="product-list.htm">
-                                <div class="img product-border-right">
-                                    <img class="" src="http://fakeimg.pl/215x215" alt="">
-                                </div>
-                                <h4>圓 線</h4>
-                                <p>高碳鋼/不銹鋼/鈦/鎳鈦/鎢/銅鋯</p>
-                            </a>
-                        </li>
-                        <li class="col">
-                            <a href="product-list.htm">
-                                <div class="img product-border-bottom">
-                                    <img class="" src="http://fakeimg.pl/215x215" alt="">
-                                </div>
-                                <h4>圓 線</h4>
-                                <p>高碳鋼/不銹鋼/鈦/鎳鈦/鎢/銅鋯</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="btn_more_box">
-                        <a class="btn_more" href="#"><em class="icon_arrow"></em>更多資訊</a>
-                    </div>
-               </div>
-               
             </div>
             <!-- container 結束 -->
-            
+
             <div class="footer">
-                <div class="inner py-5">
-                    <div>
-                        <a href="index.htm"><img class="logo" src="img/fym_logo.png" alt=""></a>
-                        <hr>
-                    </div>
-                    
-                    <ul>
-                        <li class="address">地址： 71043台南市永康區中正路279巷5號</li>
-                        <li class="phone">電話 : 886-6-2021229</li>
-                        <li>(聯絡時間 : 9:00~12:00 / 13:00~17:00)</li>
-                    </ul>
-                </div>
                 <div class="copy_right">
                     <span>©2020 FYM Inc</span>
-                </div>   
+                </div>
             </div>
-    </div>
-    <!-- warpper 結束 -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css'/>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css'/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'></script>
-    <script src="js/common.js"></script>
+        </div>
+        <div></div>
+        <!-- warpper 結束 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script src="js/common.js"></script>
 
-    <script>
-        $(function(){
-            // 產品
-            $('.product_list_gallery').slick({
-                mobileFirst:true,
-                responsive: [
-                    {
-                        breakpoint: 769,
-                        settings: 'unslick'
+        <script>
+            $(function () {
+                // 產品
+                $(".product_list_gallery").slick({
+                    mobileFirst: true,
+                    responsive: [
+                        {
+                            breakpoint: 769,
+                            settings: "unslick",
+                        },
+                    ],
+                });
+
+                //剩一張不顯示輪播
+                if ($(".banner_gallery .item").length < 2) return;
+                if ($(".banner_gallery_m .item").length < 2) return;
+
+                $(".banner_gallery").slick({
+                    dots: true,
+                    autoplay: true,
+                    // mobileFirst:true,
+                    responsive: [
+                        {
+                            breakpoint: 414,
+                            settings: "unslick",
+                        },
+                    ],
+                });
+
+                $(".banner_gallery_m").slick({
+                    dots: true,
+                    autoplay: true,
+                });
+
+                $(".side").on("click", function (e) {
+                    let etc = e.target.className;
+                    if (etc === "icon_2 lv1" || etc === "lv2") {
+                        $(e.target).parent().toggleClass("active");
                     }
-                ]
+                });
+
+
+                // 上方產品列表啟動
+                $(".product_table_trigger").hover(
+                    function () {
+                        $(".product_table").css(
+                            "transform",
+                            "translate(0,0px)"
+                        );
+                        $(".product_table").css("opacity", "1");
+                    },
+                    function () {
+                        $(".product_table").css(
+                            "transform",
+                            "translate(0,-100%)"
+                        );
+                        $(".product_table").css("opacity", "0");
+                    }
+                );
+                $(".product_table").hover(
+                    function () {
+                        $(".product_table").css(
+                            "transform",
+                            "translate(0,0px)"
+                        );
+                        $(".product_table").css("opacity", "1");
+                    },
+                    function () {
+                        $(".product_table").css(
+                            "transform",
+                            "translate(0,-100%)"
+                        );
+                        $(".product_table").css("opacity", "0");
+                    }
+                );
             });
-
-        
-            //剩一張不顯示輪播
-           if($('.banner_gallery .item').length  < 2) return
-           if($('.banner_gallery_m .item').length  < 2) return
-
-
-           $('.banner_gallery').slick({
-                dots: true,
-                autoplay: true,
-                // mobileFirst:true,
-                responsive: [
-                    {
-                        breakpoint:414,
-                        settings: 'unslick'
-                    }
-                ]
-           });
-
-           $('.banner_gallery_m').slick({
-                dots: true,
-                autoplay: true,
-           })
-           
-           
-
-        });
-    </script>
-</body>
-</html> 
+        </script>
+    </body>
+</html>

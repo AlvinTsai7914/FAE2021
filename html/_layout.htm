@@ -1,79 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style_zh-Hant.css">
-    <title>版型</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style_zh-Hant.css" />
+        <title>版型</title>
+    </head>
 
-</head>
-<body>
-    <!-- warpper 開始 -->
-    <div class="wrapper index">
-       
+    <body>
+        <!-- warpper 開始 -->
+        <div class="wrapper index">
             <header>
                 <div class="inner">
                     <a href="index.htm" class="logo">帆茂股份有限公司</a>
-                    <div class="menu_lang"> <a class="active" href="zh_tw">繁中</a><a href="zh_en">EN</a> <a href="zh_jp">JP</a></div>
+                    <div class="main_menu">
+                        <ul>
+                            <li><a href="index.htm">首 頁</a></li>
+                            <li><a href="product-list.htm">產品介紹</a></li>
+                            <li><a href="about.htm">關於我們</a></li>
+                            <li><a href="contact.htm">聯絡我們</a></li>
+                        </ul>
+                    </div>
+                    <select>
+                        <option selected href="zh_tw">繁中</option>
+                        <option href="zh_tw">简中</option>
+                        <option href="zh_en">EN</option>
+                        <option href="zh_jp">JP</option>
+                    </select>
                 </div>
-               
+
                 <div class="menu_oprate">
                     <div class="btn_side_open">open</div>
                     <div class="btn_side_close">close</div>
                 </div>
             </header>
-            
-            <!-- 內頁白色menu 開始 -->
-            <div class="side" >
+
+            <!-- 側邊 menu 開始 -->
+            <div class="side">
                 <div class="menu">
                     <ul>
                         <li><a class="icon_1" href="index.htm">首頁</a></li>
-                        <li><a class="icon_2" href="product-list.htm">產品</a></li>
-                        <li><a class="icon_3" href="production.htm">製程</a></li>
+                        <li>
+                            <a class="lv1" href="#">產品</a>
+                            <ul>
+                                <li>
+                                    <a class="lv2" href="#">設備</a>
+                                    <ul>
+                                        <li><a href="#">繞線設備機</a></li>
+                                        <li><a href="#">伸線機</a></li>
+                                        <li><a href="#">放線設備</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">材料</a></li>
+                                <li><a href="#">主類別</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="icon_3" href="production.htm">製程</a>
+                        </li>
                         <li><a class="icon_4" href="about.htm">關於我們</a></li>
-                        <li><a class="icon_5" href="contact.htm">聯絡我們</a></li>
+                        <li>
+                            <a class="icon_5" href="contact.htm">聯絡我們</a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <!-- 內頁白色menu 結束 -->
 
-           
-    
             <!-- main_banner 開始 -->
             <div class="main_banner">
-                <!-- 首頁 大menu 開始 -->
-                <div class="main_menu">
-                    <ul>
-                        <li><a class="icon_1" href="index.htm">首 頁<span>home</span></a></li>
-                        <li><a class="icon_2" href="product-list.htm">產 品<span>product</span></a></li>
-                        <li><a class="icon_3" href="production.htm">製 程<span>process</span></a></li>
-                        <li><a class="icon_4" href="about.htm">關於我們<span>about</span></a></li>
-                        <li><a class="icon_5" href="contact.htm">聯絡我們<span>contact</span></a></li>
-                    </ul>
-                </div>
-                <!-- 首頁 大menu 結束 -->
-    
                 <div class="gallery">
-                    <div><img src="img/banner.jpg" alt=""></div>
+                    <div><img src="img/banner.jpg" alt="" /></div>
                 </div>
             </div>
             <!-- main_banner 結束 -->
             <!-- container 開始 -->
             <div class="container">
-                <p style="font-size: 20px;">測試測試測，
+                <p style="font-size: 20px">
+                    測試測試測，
                     測試測試測試測試測試測試測試測試測試測試測試測試測試，
                     測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試，
                     測試測試測試測試測試測試測試測試測試測試測試測試，
                     測試測試測試測試測試測試測試測試測試測試測試測試，
-                    測試測試測試測試測試測試測試測試測試測試測試試測試測試測試</p>
+                    測試測試測試測試測試測試測試測試測試測試測試試測試測試測試
+                </p>
             </div>
             <!-- container 結束 -->
-    </div>
-    <!-- warpper 結束 -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css'/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'></script>
-    <script src="js/common.js"></script>
-   
-</body>
-</html> 
+        </div>
+        <!-- warpper 結束 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script src="js/common.js"></script>
+    </body>
+    <script>
+        $(function () {
+            $(".side").on("click", function (e) {
+                let etc = e.target.className;
+                console.log(etc);
+                if (etc === "lv1" || etc === "lv2") {
+                    $(`.${etc}`).parent().toggleClass("active");
+                }
+            });
+        });
+    </script>
+</html>
