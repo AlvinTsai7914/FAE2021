@@ -34,14 +34,12 @@
 }
 
 .video-wrap iframe, .video-wrap video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 .blog-grid.right-flow {
     flex-direction: row-reverse;
@@ -56,15 +54,13 @@
     line-height: 1.8;
 }
 
-
 .blog-grid h1, .blog-grid h2, .blog-grid h3, .blog-grid h4, .blog-grid h5, .blog-grid h6 {
-    color: #910782;
+    color: #00126F;
 }
-
 
 .blog-grid .sub-title-p {
     font-size: 1.3rem;
-    color: #992d76;
+    color: #0B2E8E;
 
 }
 
@@ -73,5 +69,5 @@
 }
 
 .blog-grid hr{
-    border-top: 1px solid  #910782;
+    border-top: 1px solid  #00126F;
 }

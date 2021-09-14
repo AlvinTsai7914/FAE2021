@@ -1,0 +1,180 @@
+.edit-block {
+    font-size: 16px;
+
+    .container {
+        padding: 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .section {
+        position: relative;
+        color: #777777;
+        margin:  0 auto 50px;
+
+        @media (max-width: 1199.98px) {
+            // @include media-breakpoint-down(lg) {
+            margin:0 auto 30px;
+        }
+
+        @media (max-width: 991.98px) {
+            margin: 0 auto  20px;
+        }
+
+        ///////////////上方控制鈕
+        .delete-btn,
+        .arrow-btn {
+            display: none;
+        }
+        ////////////////////
+
+
+    }
+
+
+    .blog-grid {
+
+        hr {
+            background-color: #666;
+            height: 1px;
+            border: none;
+        }
+
+
+        // 右圖
+        &.right-flow {
+            flex-direction: row-reverse;
+        }
+
+
+        .text-box {
+            text-align: justify;
+            position: relative;
+
+            @media (max-width: 1199.98px) {
+                // @include media-breakpoint-down(lg) {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+
+        .img-box {
+            overflow: hidden;
+        }
+
+
+        p {
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        img+span {
+            font-size: .9rem;
+        }
+
+        a {
+            display: inline-block;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color:#000;
+            line-height: 1;
+        }
+
+        .sub-title-p {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 767.98px) {
+            // @include media-breakpoint-down(sm) {
+
+            .sub-title-p {
+                margin: 0;
+            }
+
+            .title {
+                font-size: 1.3rem;
+            }
+        }
+
+
+
+        // 影片RWD embed youtube
+        .video-wrap {
+            position: relative;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+
+            iframe,
+            video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            &+span {
+                font-size: .9rem;
+            }
+
+            &.ckeditor-html5-video {
+                padding: 0;
+
+                video {
+                    position: unset;
+                }
+            }
+        }
+
+    }
+
+    table {
+
+        width: 100%;
+        // min-width: 800px;
+
+        thead th {
+            background-color: $primary-color;
+            color: #FFF;
+        }
+
+        tbody td {
+            background-color: #0094ff0f;
+        }
+
+        td,
+        th {
+            padding: 10px 15px;
+            border-bottom: 2px solid #FFF;
+            border: 2px solid #FFF;
+
+        }
+    }
+
+    .table-wrap {
+        @media (max-width: 991.98px) {
+        // @include media-breakpoint-down(md) {
+            overflow: auto;
+        }
+    }
+    ol li{
+        list-style-type: decimal;
+    }
+
+    ul li {
+        list-style-type: disc;
+    }
+
+    ol,
+    ul {
+        margin-left: 1rem;
+
+    }
+}
+

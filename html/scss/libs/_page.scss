@@ -1,0 +1,217 @@
+// 首頁區塊
+.index_news_list {
+        padding: 100px 0 250px;
+    .page_title h2 {
+        color: white;
+        &::after {
+            background-color: $primary-color-light;
+        }
+    }
+    .news_list {
+        max-width: 1140px;
+        margin: 0 auto;
+        @include respond-to(lg-screen) {
+            max-width: 960px;
+        }
+    }
+
+    @include respond-to(only-device) {
+        padding: 0 0 100px;
+    }
+}
+
+.index_product_list {
+    padding: 100px 0;
+    @include respond-to(only-device) {
+        padding: 50px 0;
+    }
+}
+
+// poroduct_detail
+.product_block {
+    margin-bottom: 50px;
+
+    h1 {
+        margin-bottom: 24px;
+        font-size:36px;
+    }
+
+    .btn_more_box {
+        display: block;
+        text-align: start;
+        .btn_more {
+            font-size: 1.25rem;
+            width: 250px;
+            text-align: center;
+            display: inline-block;
+            padding: 6px 25px 6px 25px;
+            background-image: none;
+        }
+    }
+
+    .product_block_content {
+        padding: 70px 0;
+        .product_item {
+            margin-bottom: 50px;
+            .product_item_title {
+                margin-bottom: 30px;
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+            .product_item_info {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    @include respond-to(only-device) {
+        h1,.btn_more_box {
+            text-align: center;
+        }
+        .product_block_content {
+            padding: 40px 20px;
+            .product_item {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+// page 頁面
+.about_content{
+    img {
+        max-width: 100%;
+    }
+}
+
+.about_content {
+    color: $dark-gray;
+    h5 {
+        display: inline-block;
+        padding-bottom: 3px;
+        margin-bottom: 30px;
+    }
+    p {
+        white-space: pre-line;
+    }
+    .info {
+        margin-bottom: 60px;
+        @include respond-to(only-device) {
+            margin-bottom: 30px;
+        }
+    }
+    .slogan {
+        @include respond-to(xs-sm-md) {
+            margin:0;
+            margin-bottom: 30px;
+        }
+    }
+    .content_block {
+        margin-bottom: 80px;
+        @include respond-to(only-device) {
+            margin-bottom: 30px;
+        }
+    }
+
+
+}
+
+.error {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error_page {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .btn_back {
+        background: $primary-color;
+        padding: 10px;
+        color: #fff;
+        border-radius: 5px;
+        height: 60px;
+        width: 120px;
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 3.125rem; 
+        color:#7E7E7E;
+    }
+
+    @include respond-to(only-device) {
+        .btn_back {
+            font-size: 1.25rem;
+            height: 48px;
+        }
+        p {
+            font-size: 2.25rem; 
+        }
+    }
+}
+.contact_section {
+    margin-bottom: 200px;
+}
+
+// 左側表單
+.contact_form {
+    label {
+        font-size: 18px;
+        color: $dark-gray;
+        &:not(:last-child) {
+            text-align: end;
+        
+         @include respond-to(xs-sm-md) {
+            text-align: start;
+        }}
+    }
+
+    .btn-check:active+.btn-outline-primary, 
+    .btn-check:checked+.btn-outline-primary, 
+    .btn-outline-primary.active, 
+    .btn-outline-primary.dropdown-toggle.show, 
+    .btn-outline-primary:active {
+        color: #fff;
+        background-color: #0d6efd;
+        border-color: #0d6efd; 
+    }
+
+    // 假checkbox
+    .btn-outline-primary {
+        position: relative;
+        top: 2px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ced4da;
+        margin-left: -1.25rem;
+        background-color: white;
+        color: white;
+        svg {
+            position: relative;
+            left: -7px;
+            top: -5px;        
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+// 右側地圖
+.contact_info {
+    .iframe_box {
+        height: 68%;
+        margin-bottom: 30px;
+        @include respond-to(xs-sm-md) {
+            height: 300px;
+        }
+    }
+    p {
+        color: $primary-color;
+    }
+    svg {
+        margin-right: 1rem;
+    }
+}

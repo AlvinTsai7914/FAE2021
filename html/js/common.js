@@ -1,29 +1,26 @@
-$(function(){
-
+$(function () {
     var windowH = window.innerHeight;
     // 手機選單
-    function sideOpen(){
-       
-        $('body').addClass('active');
-        $('.side').css({height:windowH}).addClass('active');
-        $('.side .menu').addClass('side_active');
-        $('.btn_side_open').hide();
-        $('.btn_side_close').show();
+    function sideOpen() {
+        $("body").addClass("active");
+        $(".side").css({ height: windowH }).addClass("active");
+        $(".side .menu").addClass("side_active");
+        $(".btn_side_open").hide();
+        $(".btn_side_close").show();
     }
 
-    function sideClose(){
-        $('body').removeClass('active');
-        $('.side').css({height:'auto'}).removeClass('active');
-        $('.side .menu').removeClass('side_active');
-        $('.btn_side_open').show();
-        $('.btn_side_close').hide();
+    function sideClose() {
+        $("body").removeClass("active");
+        $(".side").css({ height: "auto" }).removeClass("active");
+        $(".side .menu").removeClass("side_active");
+        $(".btn_side_open").show();
+        $(".btn_side_close").hide();
     }
 
-
-    $('.menu_oprate .btn_side_open').on('click',function(){
+    $(".menu_oprate .btn_side_open").on("click", function () {
         sideOpen();
     });
-    $('.menu_oprate .btn_side_close').on('click',function(){
+    $(".menu_oprate .btn_side_close").on("click", function () {
         sideClose();
     });
 
@@ -33,13 +30,9 @@ $(function(){
     // $('.menu').eq(0).addClass('menu_ori')
     // $('.menu').eq(1).addClass('menu_clone');
 
-
-
-    var iNav_1Point = parseInt( $(".menu_ori").offset().top+ $(".menu_ori").height())
-    var iWinScrollT;
-    var oScrollTimer = null;
-
-   
+    // var iNav_1Point = parseInt( $(".menu_ori").offset().top+ $(".menu_ori").height())
+    // var iWinScrollT;
+    // var oScrollTimer = null;
 
     // $(window).on("scroll", function(){
     //     var iwinWidth = $(window).width();
@@ -49,7 +42,7 @@ $(function(){
     //     oScrollTimer = setTimeout(function(){
     //         iWinScrollT = $(window).scrollTop();
     //         if(iWinScrollT > iNav_1Point){
-               
+
     //             if(iwinWidth > 768){
     //                 $(".menu_ori").css({"visibility":"hidden"});
     //                 $(".menu_clone").addClass('fixed_active')
@@ -59,79 +52,77 @@ $(function(){
     //                 $(".menu_ori").css({"visibility":"visible"});
     //                 $(".menu_clone").removeClass('fixed_active')
     //             }
-              
+
     //         }
     //     },0);
 
     // });
-
- 
-
 });
 
-
-$(function(){
-       $('body').append('<div class="gototop"></div>')
+$(function () {
+    $("body").append('<div class="gototop"></div>');
     // gototop
     var $goToTop = $(".gototop");
-	var iScrollPointA = 0;  //滾回的位置
-	var iScrollPointB = 20; //滾到的位置 出現gototop
-	
-	//滾動事件
-	var oScrollTimer = null;
-	$(window).on("scroll", function(){
+    var iScrollPointA = 0; //滾回的位置
+    var iScrollPointB = 20; //滾到的位置 出現gototop
 
-		if(oScrollTimer){
-			clearTimeout(oScrollTimer);
-		}
-		oScrollTimer = setTimeout(function(){
-							if( $(window).scrollTop() > iScrollPointB) {
-								$goToTop.css({"opacity":"0.6", "bottom":"70px"});	
-							} else {
-								$goToTop.css({"opacity":"0", "bottom":"30px"});	
-							}
-						},150);
-	});
-	
-	// 讓捲軸用動畫的方式移動到到指定id位罝
-	$goToTop.on("click", function(){
-		var $body = (window.opera) ? (document.compatMode === "CSS1Compat" ? $('html') : $('body')) : $('html,body'); //修正 Opera 問題
-		$body.animate({scrollTop: iScrollPointA}, 150);
-		return false;
-	});
+    //滾動事件
+    var oScrollTimer = null;
+    $(window).on("scroll", function () {
+        if (oScrollTimer) {
+            clearTimeout(oScrollTimer);
+        }
+        oScrollTimer = setTimeout(function () {
+            if ($(window).scrollTop() > iScrollPointB) {
+                $goToTop.css({ opacity: "0.6", bottom: "70px" });
+            } else {
+                $goToTop.css({ opacity: "0", bottom: "30px" });
+            }
+        }, 150);
+    });
 
+    // 讓捲軸用動畫的方式移動到到指定id位罝
+    $goToTop.on("click", function () {
+        var $body = window.opera ? (document.compatMode === "CSS1Compat" ? $("html") : $("body")) : $("html,body"); //修正 Opera 問題
+        $body.animate({ scrollTop: iScrollPointA }, 150);
+        return false;
+    });
 
-     // 上方產品列表啟動
-     $(".product_table_trigger").hover(
+    // 下拉選單啟動
+    $(".product_table_trigger").hover(
         function () {
-            $(".header_product_table").css(
-                "transform",
-                "translate(0,0px)"
-            );
-            $(".header_product_table").css("opacity", "1");
+            $(".header_dropdown").css({
+                transform: "translate(0,0px)",
+                opacity: "1",
+            });
         },
         function () {
-            $(".header_product_table").css(
-                "transform",
-                "translate(0,-100%)"
-            );
-            $(".header_product_table").css("opacity", "0");
+            $(".header_dropdown").css({
+                transform: "translate(0,-105%)",
+                opacity: "0",
+            });
         }
     );
-    $(".header_product_table").hover(
+    $(".header_dropdown").hover(
         function () {
-            $(".header_product_table").css(
-                "transform",
-                "translate(0,0px)"
-            );
-            $(".header_product_table").css("opacity", "1");
+            $(".header_dropdown").css({ 
+                transform: "translate(0,0px)", 
+                opacity: "1" 
+            });
         },
         function () {
-            $(".header_product_table").css(
-                "transform",
-                "translate(0,-100%)"
-            );
-            $(".header_product_table").css("opacity", "0");
+            $(".header_dropdown").css({ 
+                transform: "translate(0,-100%)", 
+                opacity: "0" 
+            });
         }
     );
+
+    // 側欄 li 展開
+    $(".side").on("click", function (e) {
+        let etc = e.target.className;
+        if (etc === "icon_2 lv1" || etc === "lv2") {
+            $(e.target).parent().toggleClass("active");
+        }
+    });
 });

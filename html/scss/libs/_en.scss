@@ -1,17 +1,2 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-body{font-family: 'Roboto', sans-serif;}
 
-.main_menu{
-    li{
-        a{ letter-spacing: 0px;}
-    }
-} 
-
-.menu{
-    li{
-        a{  letter-spacing: 0px;
-            &.icon_3{background-position: 44px center;}
-        }
-    }
-} 
 
