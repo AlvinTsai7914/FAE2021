@@ -352,11 +352,12 @@ header {
 // 側欄樣式
 .side {
     display: none;
-    overflow: scroll;
+    overflow-y: scroll;
     position: fixed;
     @include respond-to(only-device) {
         display: block;
         &.active {
+            height: calc(100vh - 60px);
             width: 100%;
             position: fixed;
             left: 0;
@@ -367,9 +368,22 @@ header {
             opacity: 1;
             background: rgba(0, 0, 0, 0.3);
             transition: 0.3s ease-in-out;
+            .menu_wrapper {
+                width: 60%;
+                transition:  0.3s ease-in-out 0.1s;
+            }
+        }
+        .menu_wrapper {
+            height: 100%;
+            width: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            transition: ease 0.3s;
         }
         .menu {
-            height: 100%;
+            min-height: 100%;
             width: 60%;
             margin: 0;
             background-color: white;
@@ -386,7 +400,8 @@ header {
             }
             ul {
                 display: block;
-                // margin-bottom: 30px;
+                padding-bottom: 100px;
+                background-color: #fff;
             }
             li {
                 width: 100%;
@@ -422,17 +437,20 @@ header {
                 .lv1_arrow {
                     @include sideArrow;
                     top: 29px;
+                    cursor: pointer;
                 }
 
                 .lv2_arrow {
                     @include sideArrow;
                     top: 22px;
+                    cursor: pointer;
                 }
 
                 // 第二層
                 ul {
                     background-color: #fff;
                     color: $dark-gray;
+                    padding-bottom: 0;
                     li {
                         border-bottom: 1px solid $dark-gray;
                         height: 54px;
@@ -461,6 +479,7 @@ header {
                 }
             }
         }
+      
     }
 }
 

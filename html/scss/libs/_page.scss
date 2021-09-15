@@ -99,6 +99,12 @@
         @include respond-to(only-device) {
             margin-bottom: 30px;
         }
+        ul {
+            font-size: 1.25rem;
+            @include respond-to(only-device) {
+                font-size: 1rem;
+            }
+        }
     }
     .slogan {
         @include respond-to(xs-sm-md) {

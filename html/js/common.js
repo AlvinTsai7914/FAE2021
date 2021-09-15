@@ -1,9 +1,12 @@
 $(function () {
     var windowH = window.innerHeight;
+
+    var sideH = windowH-60
     // 手機選單
     function sideOpen() {
         $("body").addClass("active");
-        $(".side").css({ height: windowH }).addClass("active");
+        // $(".side").css({ height: sideH }).addClass("active");
+        $(".side").addClass("active");
         $(".side .menu").addClass("side_active");
         $(".btn_side_open").hide();
         $(".btn_side_close").show();
@@ -11,7 +14,8 @@ $(function () {
 
     function sideClose() {
         $("body").removeClass("active");
-        $(".side").css({ height: "auto" }).removeClass("active");
+        // $(".side").css({ height: "auto" }).removeClass("active");
+        $(".side").removeClass("active");
         $(".side .menu").removeClass("side_active");
         $(".btn_side_open").show();
         $(".btn_side_close").hide();
@@ -125,4 +129,12 @@ $(function () {
             $(e.target).parent().toggleClass("active");
         }
     });
+
+    // // 跳轉日本網站
+    // $("select").on("click", function(e){
+    //     let value = e.target.value;
+    //     if (value ===  "http://www.fae.jp/") {
+    //         window.location.assign(value);
+    //     }
+    // })
 });

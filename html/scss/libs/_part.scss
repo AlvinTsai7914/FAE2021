@@ -515,7 +515,7 @@ table.product_table {
     position: relative;
     padding-top: 80px;
     img {
-        width: 100vw;
+        width: 100%;
         height: auto;
     }
     @include respond-to(only-device) {
