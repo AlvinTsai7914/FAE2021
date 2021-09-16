@@ -19,7 +19,7 @@ body {
 
 a,
 a:not([href]):not([tabindex]){
-    color: $primary-color;
+    // color: $primary-colo;
     transition: 0.3s ease-in-out;
 }
 
@@ -124,8 +124,9 @@ header {
             padding-top: 10px;
             background: url(../img/FAE_logo_white.png) no-repeat center center;
             background-size: cover;
-            text-indent: -100%;
+            text-indent: -999999999%;
             overflow: hidden;
+            
         }
 
         .menu_lang {
@@ -369,7 +370,7 @@ header {
             background: rgba(0, 0, 0, 0.3);
             transition: 0.3s ease-in-out;
             .menu_wrapper {
-                width: 60%;
+                width: 100%;
                 transition:  0.3s ease-in-out 0.1s;
             }
         }
@@ -384,7 +385,7 @@ header {
         }
         .menu {
             min-height: 100%;
-            width: 60%;
+            width: 100%;
             margin: 0;
             background-color: white;
             transition: 0.3s ease-in-out;
@@ -405,8 +406,8 @@ header {
             }
             li {
                 width: 100%;
-                height: 68px;
-                line-height: 68px;
+                // height: 68px;
+                // line-height: 68px;
                 align-items: center;
                 justify-content: center;
                 border-bottom: 1px solid $gray;
@@ -416,6 +417,7 @@ header {
                 background-color: #fff;
                 position: relative;
                 transition: 0.3s ease-in-out;
+                word-wrap:break-word; 
                 a {
                     display: block;
                     letter-spacing: 3px;
@@ -425,7 +427,7 @@ header {
                     text-align: left;
                     transition: 0.3s ease-in-out;
                     background: none;
-                    padding-left: 15px;
+                    padding: 15px;
                 }
 
                 img {
@@ -438,12 +440,14 @@ header {
                     @include sideArrow;
                     top: 29px;
                     cursor: pointer;
+                    pointer-events: none;
                 }
 
                 .lv2_arrow {
                     @include sideArrow;
                     top: 22px;
                     cursor: pointer;
+                    pointer-events: none;
                 }
 
                 // 第二層
@@ -451,26 +455,29 @@ header {
                     background-color: #fff;
                     color: $dark-gray;
                     padding-bottom: 0;
+                    display: none;
                     li {
                         border-bottom: 1px solid $dark-gray;
-                        height: 54px;
-                        line-height: 54px;
+                        // height: 54px;
+                        // line-height: 54px;
                         font-size: 18px;
                         transition: 0.3s ease-in-out;
                         a {
-                            padding-left: 30px;
+
+                            padding:12px 50px 12px 30px;
                         }
 
                         // 第三層
                         ul {
+                            display: none;
                             li {
-                                height: 42px;
-                                line-height: 42px;
+                                // height: 42px;
+                                // line-height: 42px;
                                 border-top: 1px solid $dark-gray;
                                 border-bottom: 0px;
                                 a {
                                     font-size: 16px;
-                                    padding-left: 45px;
+                                    padding: 8px 8px 8px 45px;
                                     color: $dark-gray;
                                 }
                             }
@@ -504,12 +511,16 @@ header {
                         left: 2px solid white;
                     }
                 }
+                ul {
+                    display: block;
+                }
             }
 
             // 第二層 ul li 樣式
             ul {
                 li {
                     &.active {
+                        display: block;
                         height: auto;
                         background-color: $gray;
                         transition: 0.3s ease;
@@ -520,6 +531,9 @@ header {
                             // top: 17px;
                             transition: 0.3s ease;
                             transform: rotate(45deg);
+                        }
+                        ul {
+                            display: block;
                         }
                     }
                     li {

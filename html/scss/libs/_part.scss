@@ -173,7 +173,7 @@ p {
             margin-right: 22px;
             border: 1px solid $primary-color-light;
         }
-        a {
+        div {
             display: inline-block;
             width: calc(100% - 220px);
             color: white;
@@ -182,12 +182,23 @@ p {
             border-bottom: 1px solid white;
             // white-space: nowrap;
             text-overflow: ellipsis;
-            h5 {
-                font-weight: 600;
+            h6 {
+                margin-top: 3px;
             }
             p {
-                // white-space: pre-wrap;
+                white-space: pre-line;
                 word-break: break-word;
+            }
+        }
+
+        a {
+            color: white;
+            &:hover {
+                h6, p {
+                    color: $primary-color-light;
+                    transition: 0.3s ease-in-out;
+                }
+
             }
         }
     }
@@ -197,13 +208,11 @@ p {
         padding-top: 10px;
         li {
             flex-direction: column;
-            border-bottom: 1px solid $black;
             // margin-bottom: 10px;
             // padding-bottom: 10px;
             line-height: 30px;
             vertical-align: middle;
             &:nth-child(1) {
-                border-top: 1px solid #333;
                 padding-top: 10px;
             }
             span.date {
@@ -214,7 +223,7 @@ p {
                 margin-right: 0px;
                 margin-bottom: 10px;
             }
-            a {
+            div {
                 width: 100%;
                 height: auto;
                 font-size: 1.1rem;
@@ -254,7 +263,7 @@ p {
                 border: 2px solid $primary-color;
             }
             h4 {
-                font-size: 1.8rem;
+                font-size: 1.25rem;
                 color: white;
                 padding: 10px;
                 margin: 0;
@@ -277,7 +286,7 @@ p {
                 }
             }
             a h4 {
-                font-size: 1.25rem;
+                font-size: 1.125rem;
             }
         }
     }
@@ -287,6 +296,12 @@ p {
     width: 100%;
     padding: 100px 250px;
     background-color: $gray;
+    @include respond-to(lg-screen) {
+        padding: 100px;
+    }
+    @include respond-to(md-screen) {
+        padding: 100px;
+    }
     @include respond-to(only-device) {
         padding: 30px;
     }
@@ -306,7 +321,7 @@ p {
     }
     p {
         text-align: center;
-        font-size: 24px;
+        font-size: 1.25rem;
         letter-spacing: 8px;
     }
     .item {
@@ -314,10 +329,6 @@ p {
         padding: 24px;
         transition: 0.3s ease;
         opacity: 0.8;
-        @include respond-to(only-device) {
-            width: 240px;
-            // height: 285px;
-        }
     }
     .slick-center {
         color: #e67e22;
@@ -330,7 +341,7 @@ p {
     .slick-prev,
     .slick-next {
         top: 44%;
-        z-index: 100;
+        z-index: 0;
         width: 40px;
         height: 38px;
     }
@@ -360,6 +371,9 @@ p {
     @include respond-to(only-device) {
         .item {
             width: 240px;
+        }
+        p {
+            font-size: 1.125rem;
         }
         .slick-prev {
             left: -15px;
@@ -613,7 +627,7 @@ table.product_table {
         a {
             // color: $primary-color;
             background-color: white;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             display: block;
             margin: 0;
             width: 100%;
@@ -638,7 +652,7 @@ table.product_table {
         .product_list_btn {
             a {
                 background-color: white;
-                font-size: 1.125rem;
+                font-size: 1.25rem;
                 display: block;
                 width: calc(100%);
                 height: 100%;

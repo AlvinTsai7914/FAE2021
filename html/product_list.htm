@@ -299,14 +299,14 @@
                             $(".mobile").css({
                                 "width": "calc(100% + 30px)",
                                 "transform": "translate(-15px, 0)",
-                                "transition": "width 0.2s linear,transform 0.1s linear 0.1s",
+                                "transition": "width 0.3s ease-in-out,transform 0.2s ease-in-out 0.1s",
                             });
                             IsClose = false;
                         } else if (scrollTop < 160){
                             $(".mobile").css({
                                 "width": "calc(100% - 30px)",
                                 "transform": "translate(0, 0)",
-                                "transition": "width 0.4s linear,transform 0.2s linear",
+                                "transition": "width 0.2s linear,transform 0.1s linear",
                             });
                             IsClose = false;
                         } 

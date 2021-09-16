@@ -215,9 +215,13 @@
         }
     }
     p {
+        position:relative;
         color: $primary-color;
+        padding-left: 2rem;
     }
     svg {
-        margin-right: 1rem;
+        position: absolute;
+        top: 4px;
+        left: 0;
     }
 }

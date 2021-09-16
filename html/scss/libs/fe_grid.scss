@@ -13,15 +13,15 @@
     .section {
         position: relative;
         color: #777777;
-        margin:  0 auto 50px;
+        margin: 0 auto 50px;
 
         @media (max-width: 1199.98px) {
             // @include media-breakpoint-down(lg) {
-            margin:0 auto 30px;
+            margin: 0 auto 30px;
         }
 
         @media (max-width: 991.98px) {
-            margin: 0 auto  20px;
+            margin: 0 auto 20px;
         }
 
         ///////////////上方控制鈕
@@ -30,25 +30,19 @@
             display: none;
         }
         ////////////////////
-
-
     }
 
-
     .blog-grid {
-
         hr {
             background-color: #666;
             height: 1px;
             border: none;
         }
 
-
         // 右圖
         &.right-flow {
             flex-direction: row-reverse;
         }
-
 
         .text-box {
             text-align: justify;
@@ -65,14 +59,13 @@
             overflow: hidden;
         }
 
-
         p {
             line-height: 1.8;
             margin: 0;
         }
 
-        img+span {
-            font-size: .9rem;
+        img + span {
+            font-size: 0.9rem;
         }
 
         a {
@@ -82,7 +75,7 @@
         .title {
             font-size: 1.5rem;
             margin-bottom: 10px;
-            color:#000;
+            color: #000;
             line-height: 1;
         }
 
@@ -102,8 +95,6 @@
             }
         }
 
-
-
         // 影片RWD embed youtube
         .video-wrap {
             position: relative;
@@ -119,8 +110,8 @@
                 height: 100%;
             }
 
-            &+span {
-                font-size: .9rem;
+            & + span {
+                font-size: 0.9rem;
             }
 
             &.ckeditor-html5-video {
@@ -131,39 +122,42 @@
                 }
             }
         }
-
     }
 
     table {
-
         width: 100%;
         // min-width: 800px;
 
         thead th {
             background-color: $primary-color;
-            color: #FFF;
+            color: #fff;
         }
 
-        tbody td {
-            background-color: #0094ff0f;
+        tbody {
+            th {
+                background-color: $primary-color;
+                color: #fff;
+            }
+            td {
+                background-color: #0094ff0f;
+            }
         }
 
         td,
         th {
             padding: 10px 15px;
-            border-bottom: 2px solid #FFF;
-            border: 2px solid #FFF;
-
+            border-bottom: 2px solid #fff;
+            border: 2px solid #fff;
         }
     }
 
     .table-wrap {
         @media (max-width: 991.98px) {
-        // @include media-breakpoint-down(md) {
+            // @include media-breakpoint-down(md) {
             overflow: auto;
         }
     }
-    ol li{
+    ol li {
         list-style-type: decimal;
     }
 
@@ -174,7 +168,5 @@
     ol,
     ul {
         margin-left: 1rem;
-
     }
 }
-
