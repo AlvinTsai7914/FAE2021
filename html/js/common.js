@@ -1,7 +1,7 @@
 $(function () {
     var windowH = window.innerHeight;
 
-    var sideH = windowH-60
+    var sideH = windowH - 60;
     // 手機選單
     function sideOpen() {
         $("body").addClass("active");
@@ -10,6 +10,8 @@ $(function () {
         $(".side .menu").addClass("side_active");
         $(".btn_side_open").hide();
         $(".btn_side_close").show();
+        // sidebar展開時語系選單隱藏 0916
+        $(".dropdown_menu").addClass("d-none");
     }
 
     function sideClose() {
@@ -19,6 +21,8 @@ $(function () {
         $(".side .menu").removeClass("side_active");
         $(".btn_side_open").show();
         $(".btn_side_close").hide();
+        // sidebar摺疊時語系選單取消隱藏 0916
+        $(".dropdown_menu").removeClass("d-none");
     }
 
     $(".menu_oprate .btn_side_open").on("click", function () {
@@ -27,40 +31,6 @@ $(function () {
     $(".menu_oprate .btn_side_close").on("click", function () {
         sideClose();
     });
-
-    // pc版首頁選單 FIXED
-
-    // $('header').after($('.menu').clone());
-    // $('.menu').eq(0).addClass('menu_ori')
-    // $('.menu').eq(1).addClass('menu_clone');
-
-    // var iNav_1Point = parseInt( $(".menu_ori").offset().top+ $(".menu_ori").height())
-    // var iWinScrollT;
-    // var oScrollTimer = null;
-
-    // $(window).on("scroll", function(){
-    //     var iwinWidth = $(window).width();
-    //     //計時器歸零
-    //     if(oScrollTimer){clearTimeout(oScrollTimer);}
-
-    //     oScrollTimer = setTimeout(function(){
-    //         iWinScrollT = $(window).scrollTop();
-    //         if(iWinScrollT > iNav_1Point){
-
-    //             if(iwinWidth > 768){
-    //                 $(".menu_ori").css({"visibility":"hidden"});
-    //                 $(".menu_clone").addClass('fixed_active')
-    //             }
-    //         }else{
-    //             if(iwinWidth > 768){
-    //                 $(".menu_ori").css({"visibility":"visible"});
-    //                 $(".menu_clone").removeClass('fixed_active')
-    //             }
-
-    //         }
-    //     },0);
-
-    // });
 });
 
 $(function () {
@@ -109,15 +79,15 @@ $(function () {
     );
     $(".header_dropdown").hover(
         function () {
-            $(".header_dropdown").css({ 
-                transform: "translate(0,0px)", 
-                opacity: "1" 
+            $(".header_dropdown").css({
+                transform: "translate(0,0px)",
+                opacity: "1",
             });
         },
         function () {
-            $(".header_dropdown").css({ 
-                transform: "translate(0,-100%)", 
-                opacity: "0" 
+            $(".header_dropdown").css({
+                transform: "translate(0,-100%)",
+                opacity: "0",
             });
         }
     );
@@ -130,11 +100,8 @@ $(function () {
         }
     });
 
-    // // 跳轉日本網站
-    // $("select").on("click", function(e){
-    //     let value = e.target.value;
-    //     if (value ===  "http://www.fae.jp/") {
-    //         window.location.assign(value);
-    //     }
-    // })
+    // 語系選單 0916
+    $(".lang").on("click", function () {
+        $(this).toggleClass("show");
+    });
 });

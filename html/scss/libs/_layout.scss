@@ -18,7 +18,7 @@ body {
 }
 
 a,
-a:not([href]):not([tabindex]){
+a:not([href]):not([tabindex]) {
     // color: $primary-colo;
     transition: 0.3s ease-in-out;
 }
@@ -28,7 +28,6 @@ a:not([href]):not([tabindex]):hover {
     text-decoration: none;
     // color: darken($primary-color, $amount: 8);
     color: $primary-color-light;
-
 }
 
 .btn-primary {
@@ -70,14 +69,14 @@ ul {
 .bg_dark {
     background-image: url(../img/bg_tube_dark.png);
     background-repeat: no-repeat;
-    background-position:  bottom;
+    background-position: bottom;
     background-size: cover;
     background-attachment: fixed;
 }
 .bg_light {
     background-image: url(../img/bg_tube_light.png);
     background-repeat: no-repeat;
-    background-position:  bottom;
+    background-position: bottom;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -126,7 +125,6 @@ header {
             background-size: cover;
             text-indent: -999999999%;
             overflow: hidden;
-            
         }
 
         .menu_lang {
@@ -158,16 +156,16 @@ header {
         display: none;
     }
     select {
-        appearance:none;
-        -moz-appearance:none;
-        -webkit-appearance:none;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
         padding: 4px 20px;
         font-size: 20px;
         border: 2px solid $primary-color-light;
         background-color: $primary-color-dark;
         color: $primary-color-light;
         cursor: pointer;
-        &:focus-visible{
+        &:focus-visible {
             outline: none;
         }
         option {
@@ -187,7 +185,7 @@ header {
         position: fixed;
         width: 100%;
         height: 60px;
-        line-height: 60px;
+        // line-height: 60px;
         left: 0;
         top: 0;
         z-index: 500;
@@ -233,6 +231,59 @@ header {
             }
         }
     }
+    // 語系下拉選單
+    .lang {
+        width: 84px;
+        padding: 3px 0;
+        font-size: 20px;
+        text-align: center;
+        position: relative;
+        box-sizing: border-box;
+        border: 2px solid $primary-color-light;
+        background-color: $primary-color-dark;
+        color: $primary-color-light;
+        cursor: pointer;
+        .dropdown_menu {
+            width: 84px;
+            position: absolute;
+            left: -2px;
+            top: 36px;
+            display: none;
+            flex-direction: column;
+            background-color: #fff;
+            color: $primary-color-light;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+            a {
+                width: 100%;
+                padding: 3px 0;
+                border-top: 2px solid $primary-color-light;
+                border-left: 2px solid $primary-color-light;
+                border-right: 2px solid $primary-color-light;
+                &:last-child {
+                    border-bottom: 2px solid $primary-color-light;
+                }
+                &:hover {
+                    background-color: $gray;
+                }
+            }
+        }
+
+        // 下拉效果
+        &.show {
+            .dropdown_menu {
+                display: flex;
+            }
+        }
+
+        @include respond-to(only-device) {
+            width: 46px;
+            font-size: 16px;
+            .dropdown_menu {
+                width: 46px;
+                top: 30px;
+            }
+        }
+    }
 }
 
 // header 下拉選單
@@ -246,7 +297,7 @@ header {
     z-index: 1;
     transform: translate(0, -105%);
     opacity: 0;
-    transition: all 0.3s ease 0.3s;   
+    transition: all 0.3s ease 0.3s;
     .row {
         max-width: 1600px;
         margin: 0 auto;
@@ -263,10 +314,10 @@ header {
         cursor: pointer;
     }
     a {
-       width: 100%;
-       color: $dark-gray;
-       font-size: 18px;
-       line-height: 32px;
+        width: 100%;
+        color: $dark-gray;
+        font-size: 18px;
+        line-height: 32px;
     }
 
     @include respond-to(only-device) {
@@ -353,52 +404,36 @@ header {
 // 側欄樣式
 .side {
     display: none;
-    overflow-y: scroll;
     position: fixed;
+    z-index: 2;
     @include respond-to(only-device) {
         display: block;
-        &.active {
-            height: calc(100vh - 60px);
-            width: 100%;
-            position: fixed;
-            left: 0;
-            top: 60px;
-            z-index: 500;
-            opacity: 0;
-            top: 60px;
-            opacity: 1;
-            background: rgba(0, 0, 0, 0.3);
-            transition: 0.3s ease-in-out;
-            .menu_wrapper {
-                width: 100%;
-                transition:  0.3s ease-in-out 0.1s;
-            }
-        }
         .menu_wrapper {
             height: 100%;
-            width: 0;
-            position: absolute;
-            top: 0;
-            left: 0;
+            max-width: 500px;
+            width: 100%;
+            position: fixed;
+            z-index: -1;
+            top: 60px;
+            left: -100%;
             background-color: #fff;
-            transition: ease 0.3s;
+            transition: 0.3s ease-in-out ;
         }
         .menu {
-            min-height: 100%;
+            height: 100vh;
             width: 100%;
+            max-width: 500px;
             margin: 0;
             background-color: white;
             transition: 0.3s ease-in-out;
-            position: absolute;
+            position: fixed;
             left: -100%;
-            top: 0px;
+            top: 60px;
+            overflow-y: scroll;
             .menu_lang {
                 display: flex;
             }
-            &.side_active {
-                left: 0;
-                opacity: 1;
-            }
+
             ul {
                 display: block;
                 padding-bottom: 100px;
@@ -417,7 +452,7 @@ header {
                 background-color: #fff;
                 position: relative;
                 transition: 0.3s ease-in-out;
-                word-wrap:break-word; 
+                word-wrap: break-word;
                 a {
                     display: block;
                     letter-spacing: 3px;
@@ -463,8 +498,7 @@ header {
                         font-size: 18px;
                         transition: 0.3s ease-in-out;
                         a {
-
-                            padding:12px 50px 12px 30px;
+                            padding: 12px 50px 12px 30px;
                         }
 
                         // 第三層
@@ -486,15 +520,39 @@ header {
                 }
             }
         }
-      
     }
 }
 
 // 側欄互動
 .side {
     @include respond-to(only-device) {
+        &.active {
+            height: calc(100vh - 60px);
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top: 60px;
+            z-index: 500;
+            opacity: 0;
+            top: 60px;
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.3);
+            transition: 0.3s ease-in-out;
+            .menu_wrapper {
+                left: 0;
+                transition: 0.3s ease-in-out;
+            }
+        }
+
+        .menu.side_active {
+            left: 0;
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+        }
+
+        // 列表展開樣式
         li {
-            //第一層展開樣式
+            //第一層
             &.active {
                 height: auto;
                 background-color: $primary-color;
@@ -516,7 +574,7 @@ header {
                 }
             }
 
-            // 第二層 ul li 樣式
+            // 第二層
             ul {
                 li {
                     &.active {
@@ -534,11 +592,6 @@ header {
                         }
                         ul {
                             display: block;
-                        }
-                    }
-                    li {
-                        &:active {
-                            background-color: $gray;
                         }
                     }
                 }
@@ -591,7 +644,3 @@ header {
 }
 
 // 以上版型
-
-
-
-

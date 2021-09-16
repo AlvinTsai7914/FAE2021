@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/png" sizes="16x16" href="img/FAE_favicon.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/FAE_favicon.png" />
         <link rel="stylesheet" href="css/style_zh-Hant.css" />
         <script data-search-pseudo-elements defer src="dist/fontawesome-5.15.2/js/all.min.js"></script>
         <title>聯絡我們</title>
@@ -11,7 +11,7 @@
     <body>
         <!-- warpper 開始 -->
         <div class="wrapper bg_light">
-                       <header>
+            <header>
                 <div class="inner">
                     <a href="index.htm" class="logo">帆茂股份有限公司</a>
                     <div class="main_menu">
@@ -24,12 +24,15 @@
                             <li><a href="contact.htm">聯絡我們</a></li>
                         </ul>
                     </div>
-                           <select>
-                        <option selected href="zh_tw">繁中</option>
-                        <option href="zh_en">EN</option>
-                        <option href="zh_cn">简中</option>
-                        <option href="http://www.fae.jp/">日語</option>
-                    </select>
+                    <div class="lang">
+                        <span>EN</span>
+                        <div class="dropdown_menu">
+                            <a href="zh_tw">繁中</a>
+                            <a href="zh_en">EN</a>
+                            <a href="zh_cn">简中</a>
+                            <a href="http://www.fae.jp/">日語</a>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="menu_oprate">
@@ -37,8 +40,7 @@
                     <div class="btn_side_close">close</div>
                 </div>
             </header>
-
-        <!-- 下拉選單 開始 -->
+            <!-- 下拉選單 開始 -->
             <div class="header_dropdown">
                 <div class="row">
                     <div class="col-6 py-3">
@@ -78,7 +80,7 @@
             </div>
             <!-- 下拉選單 結束 -->
 
-              <!-- 側邊 menu 開始 -->
+            <!-- 側邊 menu 開始 -->
             <div class="side">
                 <div class="menu_wrapper"></div>
                 <div class="menu">
@@ -88,15 +90,21 @@
                             <a class="icon_2 lv1" href="#">產品</a>
                             <ul>
                                 <li>
-                                    <a class="lv2" href="#">設備</a>
+                                    <a class="lv2" href="#"
+                                        >設備主類別設備主類別設備主類別設備主類別設備主類別設備主類別設備主類別設備主類別</a
+                                    >
                                     <ul>
-                                        <li><a href="#">繞線設備機</a></li>
+                                        <li>
+                                            <a href="product_list.htm"
+                                                >繞線設備機繞線設備機繞線設備機繞線設備機繞線設備機繞線設備機繞線設備機繞線設備機繞線設備機</a
+                                            >
+                                        </li>
                                         <li><a href="#">伸線機</a></li>
                                         <li><a href="#">放線設備</a></li>
                                         <li><a href="#">張力控制器</a></li>
                                         <li><a href="#">熱處理設備</a></li>
-                                        <div class="lv2_arrow"></div>
                                     </ul>
+                                    <div class="lv2_arrow"></div>
                                 </li>
                                 <li>
                                     <a class="lv2" href="#">材料</a>
@@ -110,8 +118,8 @@
                                         <li><a href="#">繞線設備機</a></li>
                                         <li><a href="#">伸線機</a></li>
                                         <li><a href="#">放線設備</a></li>
-                                        <div class="lv2_arrow"></div>
                                     </ul>
+                                    <div class="lv2_arrow"></div>
                                 </li>
                                 <li>
                                     <a class="lv2" href="#">主類別</a>
@@ -125,8 +133,8 @@
                                         <li><a href="#">繞線設備機</a></li>
                                         <li><a href="#">伸線機</a></li>
                                         <li><a href="#">放線設備</a></li>
-                                        <div class="lv2_arrow"></div>
                                     </ul>
+                                    <div class="lv2_arrow"></div>
                                 </li>
                             </ul>
                             <div class="lv1_arrow"></div>
@@ -139,18 +147,20 @@
                 </div>
             </div>
             <!-- 側邊 menu 結束 -->
+            
             <div class="breadcrumbs">
                 <ul>
                     <li class="breadcrumb_item"><a href="index.htm">首頁</a></li>
                     <li class="breadcrumb_item">聯絡我們</li>
                 </ul>
             </div>
+            
             <!-- container 開始 -->
             <div class="container">
                 <div class="page_title">
                     <h2>聯絡我們</h2>
                 </div>
-                <div class="row flex-wrap-reverse contact_section" >
+                <div class="row flex-wrap-reverse contact_section">
                     <!-- 左側表單 開始 -->
                     <div class="col-12 col-md-6 contact_form">
                         <form>
@@ -181,7 +191,12 @@
                             <div class="form-group row">
                                 <label for="content" class="col-sm-3 col-form-label">內容</label>
                                 <div class="col-sm-8">
-                                    <textarea type="text" class="form-control" id="content" style="height: 180px"></textarea>
+                                    <textarea
+                                        type="text"
+                                        class="form-control"
+                                        id="content"
+                                        style="height: 180px"
+                                    ></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -228,8 +243,8 @@
                                 allowfullscreen=""
                                 aria-hidden="false"
                                 tabindex="0"
-                            ></iframe>   
-                            </div>
+                            ></iframe>
+                        </div>
                         <p><i class="fas fa-map-marker-alt"></i>地址 : 23874新北市樹林區東豐街49巷22弄14號</p>
                         <p><i class="fas fa-phone"></i>電話 : 02-8685-5156</p>
                     </div>
