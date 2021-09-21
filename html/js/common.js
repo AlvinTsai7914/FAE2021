@@ -104,7 +104,7 @@ $(function () {
     });
 });
 
-//點擊空白處關閉 side 語言列 0917
+//0917新增 監聽點擊目標，非語言列/side和其子元素，關閉語言列/side
 $(function () {
     function closeSideAndLang(e){
         let lang = $(".lang")

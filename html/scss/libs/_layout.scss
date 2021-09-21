@@ -235,7 +235,8 @@ header {
     .lang {
         width: 84px;
         padding: 3px 0;
-        // 0917
+        // 0917 增加margin-right
+        margin-right: 12px;
         font-size: 20px;
         text-align: center;
         position: relative;
@@ -318,7 +319,7 @@ header {
         max-width: 680px;
     }
     li {
-        // 0917 修改字數多時，單項目行距過高，項目與項目間距過近
+        // 0917 修改padding
         padding: 0 16px 0 0;
         cursor: pointer;
         margin-bottom: 8px;

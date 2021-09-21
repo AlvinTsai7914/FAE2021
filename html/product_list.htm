@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/png" sizes="16x16" href="img/FAE_favicon.png" />
+        <!-- <link rel="stylesheet" href="css/style_zh-Hant.css" /> -->
         <link rel="stylesheet" href="css/style_en.css" />
         <title>內頁版型</title>
     </head>
@@ -170,8 +171,9 @@
                     <h2>放線設備</h2>
                 </div>
                 <div class="switch_btn row d-none d-sm-flex">
-                    <div class="example_btn col-6">
-                        <a class="ex active">Features and introduction examples</a>
+                    <!-- 0917 修改 active 位置 -->
+                    <div class="example_btn col-6 active">
+                        <a class="ex">Features and introduction examples</a>
                     </div>
                     <div class="product_list_btn col-6">
                         <a class="pr">Standard product display</a>
@@ -179,7 +181,8 @@
                 </div>
 
                 <div class="switch_btn mobile row d-flex d-sm-none">
-                    <div class="example_btn col-6">
+                    <!-- 0917 修改 active 位置  -->
+                    <div class="example_btn col-6 active">
                         <a class="ex active">Features and introduction examples</a>
                     </div>
                     <div class="product_list_btn col-6">
@@ -283,16 +286,16 @@
                     let etc = e.target.className;
                     console.log(etc);
 
-                    if (etc === "pr") {
+                    if (etc === "product_list_btn col-6") {
                         $(".example_block").addClass("d-none");
                         $(".product_list").removeClass("d-none");
-                        $(".pr").addClass("active");
-                        $(".ex").removeClass("active");
-                    } else if (etc === "ex") {
+                        $(".product_list_btn").addClass("active");
+                        $(".example_btn").removeClass("active");
+                    } else if (etc === "example_btn col-6") {
                         $(".product_list").addClass("d-none");
                         $(".example_block").removeClass("d-none");
-                        $(".ex").addClass("active");
-                        $(".pr").removeClass("active");
+                        $(".example_btn").addClass("active");
+                        $(".product_list_btn").removeClass("active");
                     }
                 });
             });
@@ -301,7 +304,6 @@
                 var Timer = null;
                 var IsClose = false;
                 // 裝置小於796，且滾動<160，.switch_btn 變化大小
-                // 0917 新增max-height效果
                 $(window).scroll(function () {
                     if (IsClose) {
                         return;
@@ -313,8 +315,7 @@
                             $(".mobile").css({
                                 width: "calc(100% + 30px)",
                                 transform: "translate(-15px, 0)",
-                                transition: "width 0.3s ease-in-out,transform 0.2s ease-in-out 0.1s,max-height 0.3s ease",
-                                "max-height": "36px",
+                                transition: "width 0.3s ease-in-out,transform 0.2s ease-in-out 0.1s",
                             });
                             IsClose = false;
                         } else if (scrollTop < 160) {
@@ -322,7 +323,6 @@
                                 width: "calc(100% - 30px)",
                                 transform: "translate(0, 0)",
                                 transition: "width 0.2s linear,transform 0.1s linear,max-height 0.3s ease",
-                                "max-height": "500px",
                             });
                             IsClose = false;
                         }
