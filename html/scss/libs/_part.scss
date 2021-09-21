@@ -322,7 +322,6 @@ p {
     p {
         text-align: center;
         font-size: 1.25rem;
-        letter-spacing: 8px;
     }
     .item {
         width: 320px;
@@ -495,19 +494,22 @@ table.product_table {
     width: 100%;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1f3266+0,ffffff+100&0.76+0,0+100 */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c21f3266', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-    width: 490px;
+    width: 450px;
     left: 0;
     top: 0;
-    margin-left: -120px;
+    margin-left: -60px;
 
     ul {
         display: flex;
         justify-content: space-between;
+        // 0917 上下置中
+        align-items: center;
         max-width: 900px;
         margin: 0 auto;
     }
-    li {
-        width: 100%;
+    li {     
+        // 0917 刪除
+        // width: 100%;   
         text-align: center;
         transition: 0.3s ease-in-out;
         a {
@@ -617,7 +619,8 @@ table.product_table {
 .switch_btn,
 .switch_btn.mobile {
     width: 520px;
-    height: 68px;
+    // 0917 刪除
+    // height: 68px;
     border: 2px solid $primary-color;
     margin: 0 auto 60px;
     cursor: pointer;
@@ -633,7 +636,10 @@ table.product_table {
             width: 100%;
             height: 100%;
             text-align: center;
-            line-height: 62px;
+            vertical-align: middle;
+            // 0917 刪除line-height 改用padding撐開高度和寬度
+            // line-height: 62px;
+            padding: 14px 16px;
         }
         & .active {
             background-color: $primary-color;
@@ -643,20 +649,25 @@ table.product_table {
     @include respond-to(only-device) {
         margin: 0 auto 60px;
         width: calc(100% - 30px);
-        height: 48px;
+        // 0917
+        // height: 48px;
         position: sticky;
         top: 58px;
         z-index: 1;
+        overflow: hidden;
         // margin-left: -15px;
         .example_btn,
         .product_list_btn {
             a {
                 background-color: white;
-                font-size: 1.25rem;
+                // 0917
+                font-size: 1rem;
                 display: block;
                 width: calc(100%);
                 height: 100%;
-                line-height: 44px;
+                // 0917
+                // line-height: 44px;
+                padding: 4px 8px;
             }
             & .active {
                 background-color: $primary-color;

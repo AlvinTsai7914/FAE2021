@@ -1,28 +1,26 @@
 $(function () {
-    var windowH = window.innerHeight;
-
-    var sideH = windowH - 60;
+    // 0917 刪除
+    // var windowH = window.innerHeight;
+    // var sideH = windowH - 60;
     // 手機選單
     function sideOpen() {
         $("body").addClass("active");
-        // $(".side").css({ height: sideH }).addClass("active");
         $(".side").addClass("active");
         $(".side .menu").addClass("side_active");
         $(".btn_side_open").hide();
         $(".btn_side_close").show();
-        // sidebar展開時語系選單隱藏 0916
-        $(".dropdown_menu").addClass("d-none");
+        // 0917 刪除
+        // $(".dropdown_menu").addClass("d-none");
     }
 
     function sideClose() {
         $("body").removeClass("active");
-        // $(".side").css({ height: "auto" }).removeClass("active");
         $(".side").removeClass("active");
         $(".side .menu").removeClass("side_active");
         $(".btn_side_open").show();
         $(".btn_side_close").hide();
-        // sidebar摺疊時語系選單取消隱藏 0916
-        $(".dropdown_menu").removeClass("d-none");
+        // 0917 刪除
+        // $(".dropdown_menu").removeClass("d-none");
     }
 
     $(".menu_oprate .btn_side_open").on("click", function () {
@@ -104,4 +102,29 @@ $(function () {
     $(".lang").on("click", function () {
         $(this).toggleClass("show");
     });
+});
+
+//點擊空白處關閉 side 語言列 0917
+$(function () {
+    function closeSideAndLang(e){
+        let lang = $(".lang")
+        // 判斷e.target非目標元素且非目標子元素，關閉目標
+        if (!lang.is(e.target) && lang.has(e.target).length === 0 ) {
+            lang.removeClass("show")
+        }
+
+        let sideActive = $(".side.active")
+        let menuActive = $(".menu.side_active")
+        if (!menuActive.is(e.target) && menuActive.has(e.target).length === 0 ) {
+            sideActive.removeClass("active")
+            menuActive.removeClass("side_active")
+            $("body").removeClass("active");
+            $(".btn_side_open").show();
+            $(".btn_side_close").hide();
+        }
+    }
+
+    $(document).mouseup((e) => {
+        closeSideAndLang(e)
+    })
 });

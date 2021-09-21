@@ -193,45 +193,37 @@
     }
 
     table {
-
         width: 100%;
         // min-width: 800px;
 
         thead th {
-            background-color: #0B2E8E;
-            color: #FFF;
+            background-color: $primary-color;
+            color: #fff;
         }
 
-        tbody td {
-            background-color: #0094ff0f;
+        tbody {
+            th {
+                background-color: $primary-color;
+                color: #fff;
+            }
+            td {
+                background-color: #0094ff0f;
+            }
         }
+
         td,
         th {
             padding: 10px 15px;
-            border-bottom: 2px solid #FFF;
-            border: 2px solid #FFF;
-
+            border-bottom: 2px solid #fff;
+            border: 2px solid #fff;
         }
     }
 
     .table-wrap {
         @media (max-width: 991.98px) {
-        // @include media-breakpoint-down(md) {
+            // @include media-breakpoint-down(md) {
             overflow: auto;
         }
-    }
-    ol li {
-        list-style-type: decimal;
-    }
-
-    ul li {
-        list-style-type: disc;
-    }
-
-    ol,
-    ul {
-        margin-left: 1rem;
-
     }
 }
 

@@ -235,6 +235,7 @@ header {
     .lang {
         width: 84px;
         padding: 3px 0;
+        // 0917
         font-size: 20px;
         text-align: center;
         position: relative;
@@ -243,6 +244,12 @@ header {
         background-color: $primary-color-dark;
         color: $primary-color-light;
         cursor: pointer;
+        transition: 0.3s ease-in-out;
+        &:hover {
+            background-color: $primary-color;
+        }
+
+
         .dropdown_menu {
             width: 84px;
             position: absolute;
@@ -268,6 +275,7 @@ header {
             }
         }
 
+    
         // 下拉效果
         &.show {
             .dropdown_menu {
@@ -310,14 +318,15 @@ header {
         max-width: 680px;
     }
     li {
-        padding: 0;
+        // 0917 修改字數多時，單項目行距過高，項目與項目間距過近
+        padding: 0 16px 0 0;
         cursor: pointer;
+        margin-bottom: 8px;
     }
     a {
         width: 100%;
         color: $dark-gray;
         font-size: 18px;
-        line-height: 32px;
     }
 
     @include respond-to(only-device) {
